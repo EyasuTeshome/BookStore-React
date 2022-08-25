@@ -1,7 +1,22 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: uuidv4(),
+    bookName: 'Sample Book One',
+  },
+  {
+    id: uuidv4(),
+    bookName: 'Sample Book Two',
+  },
+  {
+    id: uuidv4(),
+    bookName: 'Sample Book Three',
+  },
+];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
