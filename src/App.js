@@ -10,17 +10,19 @@ import Categories from './components/Categories';
 import Navbar from './components/Navbar/Navbar';
 import store from './redux/configureStore';
 
-const App = () => (
-  <Provider store={store}>
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="*" element={<Books />} />
-      </Routes>
-    </div>
-  </Provider>
-);
+function App() {
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="*" element={<Books />} />
+        </Routes>
+      </div>
+    </Provider>
+  );
+}
 
 export default App;
